@@ -9,3 +9,6 @@ Now you can use dpkg to install Chrome from the downloaded DEB file:
 # whereis google-chrome
 google-chrome: /usr/bin/google-chrome /usr/share/man/man1/google-chrome.1.gz
 
+Upgrade
+# google-chrome-stable -version
+# sudo apt-get upgrade google-chrome-stable
