@@ -1,6 +1,12 @@
 # Содержание
+* [Git](../main/commands.md#git)
 * [Google Chrome](../main/commands.md#google-chrome)
 * [Composer](../main/commands.md#composer)
+---
+# Git
+Добавить изменения к последнему коммиту
+> `git commit -a --amend`
+
 ---
 # Google Chrome
 
@@ -27,6 +33,6 @@
 
 Обновление до 2й ветки
 
-> #### `composer self-update --2`
+> `composer self-update --2`
 
 ---
