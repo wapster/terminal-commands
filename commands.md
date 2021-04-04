@@ -27,6 +27,6 @@
 
 Обновление до 2й ветки
 
-> #### `composer self-update --2`
+> `composer self-update --2`
 
 ---
