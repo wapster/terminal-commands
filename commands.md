@@ -6,7 +6,6 @@
 # Git
 Добавить изменения к последнему коммиту
 > `git commit -a --amend`
-
 ---
 # Google Chrome
 
