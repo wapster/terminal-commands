@@ -1,3 +1,7 @@
+# Содержание
+* [Google Chrome](../blob/main/commands.md#google-chrome)
+* [Composer](../blob/main/commands.md#composer)
+---
 # Google Chrome
 
 #### Установка
