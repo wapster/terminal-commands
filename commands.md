@@ -3,10 +3,25 @@
 * [Google Chrome](../main/commands.md#google-chrome)
 * [Composer](../main/commands.md#composer)
 * [MySQL](../main/commands.md#mysql)
+* [bash_aliases]((../main/commands.md#bash_aliases))
 ---
 # Команды
+
+# Очистить (удалить) содержимого файла
+> `echo -n > path/file`
+> `cp /dev/null path/file`
+> `cat /dev/null > path/file`
+
+### Свободное место на диск
+> `df -h`
+
+### Поиск файла my.cnf
+> `sudo find / -name my.cnf`
+
 ### Копирование файла на удаленный сервер
 > `scp ~/Downloads/file.txt root@123.123.123.123:~/Downloads/`
+### Копирование с удаленного сервера
+> `scp user@remote.host:file.txt /some/local/directory`
 
 
 ### Время на сервере
@@ -70,16 +85,23 @@
 ### Установка
 > `sudo apt-get install mysql-server`
 
-Статус: остановить, запустить, проверить
+Статус: остановить, запустить, проверить, перезапустить
 > `systemctl stop mysql.service`
 > `systemctl start mysql.service`
 > `systemctl status mysql.service`
+> `/etc/init.d/mysql restart`
 
 ### Настройка
-Файл конфигурации, в котором хранятся логин и пароль
+* Файл конфигурации, в котором хранятся логин и пароль
 > `sudo nano /etc/dbconfig-common/phpmyadmin.conf`
 dbc_dbuser='your_username'
 dbc_dbpass='your_password'
+
+* узнать какой файл конфигурации читает сервер MySQL
+> `which mysqld` # /usr/sbin/mysqld
+> `/usr/sbin/mysqld --verbose --help | grep -A 1 'Default options'`
+  `# Default options are read from the following files in the given order:`
+  `# /etc/my.cnf /etc/mysql/my.cnf ~/.my.cnf`
 
 ### Команды для работы c MySQL
 Вход
@@ -108,3 +130,6 @@ dbc_dbpass='your_password'
 
 Удалить существующую учётную запись пользователя
 > `DROP USER 'user_name'@'localhost';`
+
+---
+# BASH_ALIASES
