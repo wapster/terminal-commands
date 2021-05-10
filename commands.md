@@ -74,7 +74,9 @@
 > `$ sudo apt-get purge google-chrome-stable`
 > `$ rm ~/.config/google-chrome/ -rf`
 > `$ rm ~/.cache/google-chrome/ -rf`
-Вы также можете удалить `/etc/apt/sources.d/google.list` и его открытые ключи, которые были добавлены в `/etc/apt/trusted.gpg`.
+
+Вы также можете удалить `/etc/apt/sources.d/google.list` и его открытые ключи, 
+которые были добавлены в `/etc/apt/trusted.gpg`.
 
 ---
 # Chromium
