@@ -11,7 +11,9 @@
 
 ### Очистить (удалить) содержимого файла
 > `echo -n > path/file`
+
 > `cp /dev/null path/file`
+
 > `cat /dev/null > path/file`
 
 ### Свободное место на диск
@@ -22,12 +24,15 @@
 
 ### Копирование файла на удаленный сервер
 > `scp ~/Downloads/file.txt root@123.123.123.123:~/Downloads/`
+
 ### Копирование с удаленного сервера
 > `scp user@remote.host:file.txt /some/local/directory`
 
 ### Время на сервере
 > `timedatectl` # показать время
+
 > `timedatectl list-timezones` # показать доступные временные зоны
+
 > `timedatectl set-timezone Asia/Yekaterinburg` # установить временную зону
 
 ---
@@ -48,6 +53,7 @@
 > `sudo mv phpunit.phar /usr/local/bin/phpunit`
 
 > `phpunit --version`
+
 ### Установка через Composer
 > `php composer.phar require --dev phpunit/phpunit ^9`
 
@@ -70,7 +76,9 @@
 
 #### Удаление
 > `$ sudo apt-get purge google-chrome-stable`
+
 > `$ rm ~/.config/google-chrome/ -rf`
+
 > `$ rm ~/.cache/google-chrome/ -rf`
 
 Вы также можете удалить `/etc/apt/sources.d/google.list` и его открытые ключи, 
