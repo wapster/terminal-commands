@@ -32,10 +32,10 @@
 
 ---
 # Git
-Добавить изменения к последнему коммиту
+* Добавить изменения к последнему коммиту
 > `git commit -a --amend`
 
-Просмотр удаленных репозиториев
+* Просмотр удаленных репозиториев
 > `git remote -v`
 ---
 
@@ -57,7 +57,6 @@
 # Google Chrome
 
 #### Установка
-скачиваем и распаковываем DEB пакет:
 > `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
 
 > `sudo dpkg -i google-chrome-stable_current_amd64.deb`
@@ -81,12 +80,12 @@
 # Chromium
 
 ### Установка
-Без snap
+* Без snap
 > `https://itectec.com/ubuntu/ubuntu-chromium-without-snap/`
 
 ### Удаление
 
-Как snap пакет
+* Как snap пакет
 > `snap remove chromium`
 > `sudo apt purge chromium-browser chromium-chromedriver`
 
@@ -104,7 +103,7 @@
 ### Обновление
 > `php composer.phar self-update`
 
-Обновление до 2й ветки
+* Обновление до 2й ветки
 
 > `composer self-update --2`
 
@@ -129,39 +128,45 @@ dbc_dbuser='your_username'
 dbc_dbpass='your_password'
 
 * узнать какой файл конфигурации читает сервер MySQL
-> `which mysqld` 
+> `which mysqld`
+
 > `# /usr/sbin/mysqld`
 
 > `/usr/sbin/mysqld --verbose --help | grep -A 1 'Default options'`
+
 > `# Default options are read from the following files in the given order:`
+
 > `# /etc/my.cnf /etc/mysql/my.cnf ~/.my.cnf`
 
 ### Команды для работы c MySQL
-Вход
+* Вход
 > `shell> sudo mysql -u user_name -p`
+
 > `Enter password: ********`
 
-Выход
+* Выход
 > `mysql> QUIT`
+
 > `Control-D`
 
-Показать всех пользователей
+* Показать всех пользователей
 > `mysql> SELECT user FROM mysql.user;`
 
-Создать пользователя (от имени пользователя root)
+* Создать пользователя (от имени пользователя root)
 > `CREATE USER 'user_name'@'host' IDENTIFIED BY 'password';`
 
-Назначить права доступа пользователю (от имени пользователя root)
+* Назначить права доступа пользователю (от имени пользователя root)
 > `GRANT ALL PRIVILEGES ON * . * TO 'user_name'@'host';`
+
 > `FLUSH PRIVILEGES;` # чтобы изменения вступли в силу
 
-Отменить определенные привилегии пользователя
+* Отменить определенные привилегии пользователя
 > `REVOKE ALL PRIVILEGES ON db_name.table_name FROM 'user_name'@'localhost';`
 
-Просмотр прав доступа пользователя
+* Просмотр прав доступа пользователя
 > `SHOW GRANTS FOR 'user_name'@'localhost';`
 
-Удалить существующую учётную запись пользователя
+* Удалить существующую учётную запись пользователя
 > `DROP USER 'user_name'@'localhost';`
 
 ---
