@@ -4,12 +4,12 @@
 * [Composer](../main/commands.md#composer)
 * [PHPUnit](../main/commands.md#phpunit)
 * [MySQL](../main/commands.md#mysql)
-* [bash_aliases]((../main/commands.md#bash_aliases))
+* [BASH Aliases](../main/commands.md#bash_aliases)
 * [Google Chrome](../main/commands.md#google-chrome)
 ---
 # Команды
 
-# Очистить (удалить) содержимого файла
+### Очистить (удалить) содержимого файла
 > `echo -n > path/file`
 > `cp /dev/null path/file`
 > `cat /dev/null > path/file`
@@ -17,14 +17,13 @@
 ### Свободное место на диск
 > `df -h`
 
-### Поиск файла my.cnf
+### Поиск файла по имени my.cnf
 > `sudo find / -name my.cnf`
 
 ### Копирование файла на удаленный сервер
 > `scp ~/Downloads/file.txt root@123.123.123.123:~/Downloads/`
 ### Копирование с удаленного сервера
 > `scp user@remote.host:file.txt /some/local/directory`
-
 
 ### Время на сервере
 > `timedatectl` # показать время
@@ -114,10 +113,13 @@
 ### Установка
 > `sudo apt-get install mysql-server`
 
-Статус: остановить, запустить, проверить, перезапустить
+### Статус: остановить, запустить, проверить, перезапустить
 > `systemctl stop mysql.service`
+
 > `systemctl start mysql.service`
+
 > `systemctl status mysql.service`
+
 > `/etc/init.d/mysql restart`
 
 ### Настройка
@@ -127,10 +129,12 @@ dbc_dbuser='your_username'
 dbc_dbpass='your_password'
 
 * узнать какой файл конфигурации читает сервер MySQL
-> `which mysqld` # /usr/sbin/mysqld
+> `which mysqld` 
+> `# /usr/sbin/mysqld`
+
 > `/usr/sbin/mysqld --verbose --help | grep -A 1 'Default options'`
-  `# Default options are read from the following files in the given order:`
-  `# /etc/my.cnf /etc/mysql/my.cnf ~/.my.cnf`
+> `# Default options are read from the following files in the given order:`
+> `# /etc/my.cnf /etc/mysql/my.cnf ~/.my.cnf`
 
 ### Команды для работы c MySQL
 Вход
