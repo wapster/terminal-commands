@@ -1,9 +1,11 @@
 # Содержание
+* [Команды](../main/commands.md#команды)
 * [Git](../main/commands.md#git)
-* [Google Chrome](../main/commands.md#google-chrome)
 * [Composer](../main/commands.md#composer)
+* [PHPUnit](../main/commands.md#phpunit)
 * [MySQL](../main/commands.md#mysql)
 * [bash_aliases]((../main/commands.md#bash_aliases))
+* [Google Chrome](../main/commands.md#google-chrome)
 ---
 # Команды
 
@@ -36,6 +38,22 @@
 
 Просмотр удаленных репозиториев
 > `git remote -v`
+---
+
+# PHPUnit
+### Глобальная установка
+> `wget -O phpunit https://phar.phpunit.de/phpunit-9.phar`
+
+> `chmod +x phpunit.phar`
+
+> `sudo mv phpunit.phar /usr/local/bin/phpunit`
+
+> `phpunit --version`
+### Установка через Composer
+> `php composer.phar require --dev phpunit/phpunit ^9`
+
+### Проверить версию
+> `php ./vendor/bin/phpunit --version`
 ---
 # Google Chrome
 
@@ -73,7 +91,16 @@
 
 ---
 # Composer
-Обновление
+### Установка
+> `php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"`
+
+> `php -r "if (hash_file('sha384', 'composer-setup.php') ===` > ` '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"`
+
+> `php composer-setup.php`
+
+> `php -r "unlink('composer-setup.php');"`
+
+### Обновление
 > `php composer.phar self-update`
 
 Обновление до 2й ветки
