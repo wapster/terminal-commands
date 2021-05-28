@@ -1,5 +1,5 @@
 ### Установка
-> `sudo apt-get install mysql-server`
+`sudo apt-get install mysql-server`
 
 ### Статус: остановить, запустить, проверить, перезапустить
 > `systemctl stop mysql.service`
