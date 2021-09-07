@@ -1,6 +1,6 @@
 # Git
 ### Добавить изменения к последнему коммиту
-> `git commit -a --amend`
+`git commit -a --amend`
 
 ### Просмотр удаленных репозиториев
-> `git remote -v`
+`git remote -v`
